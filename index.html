@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../march23-in-class-project/assets/style.css">
+</head>
+<body class="html">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <h2>New Times Search</h2>
+          </div>
+  </div>
+  <div class="row">
+      <div class="col-12">
+      <h5>Search Parameters</h5>
+      </div>
+  </div>
+
+
+  <div class="row">
+      <div class="col">
+      <form>
+          <label>Search Term</label>
+          <input type="text">
+
+          <label>Number of records to retrived</label>
+          <input type="">
+
+          <label>Start year (Option)</label>
+          <input type="">
+
+          <label> End year (Option)</label>
+          <input type="">
+      </form>
+
+      <button type="submit">Submit</button>
+      <button type="reset">clear</button>
+
+
+       </div>
+  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+// on click event to push the search term
+$("search term button").on("click", function() {
+   var searchTerm = $(this).attr("data-TITLE"); // GET CORRECT DATA ATTR FROM BISMARK
+   var limit = $(this).attr("data-LIMIT"); // GET CORRECT DATA ATTR
+   var startDate = $(this).attr("data-STARTDATE"); // FROM HTML
+   var endDate = $(this).attr("data-ENDDATE"); // FROM HTML
+   var queryURL = "........" + searchTerm + "....." + "&limit=" + limit;// api url from Jerry
+
+   $.ajax({
+       url: queryURL,
+       method: "GET"
+     })
+
+   .then(function(response) {
+
+   });
+
+   // on click event for limiting number of records to retrieve
+   $("").on("click", function() {
+
+   });
+
+   // on click start yr
+   $("").on("click", function() {
+
+   });
+
+   // on click end yr
+   $("").on("click", function() {
+
+   });
+
+});
+
+</script>
+
+</body>
+</html>
