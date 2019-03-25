@@ -9,32 +9,36 @@
 </head>
 <body class="html">
    <div class="container">
-       <div class="row">
-           <div class="col-12">
+       <div class="row row_1">
+           <div class="col-12 search_bar">
                <h2>New Times Search</h2>
            </div>
    </div>
-   <div class="row">
+   <div class="row search_p">
        <div class="col-12">
        <h5>Search Parameters</h5>
        </div>
    </div>
 
 
-   <div class="row">
-       <div class="col">
-       <form>
-           <label>Search Term</label>
-           <input type="text">
+   <div class="row row_term">
+       <div class="col col lg">
+       <form class="form">
+           <label class="term">Search Term</label>
+           <input type="text" class="form-control-lg" id="input">
+           <br>
 
-           <label>Number of records to retrived</label>
-           <input type="">
+           <label class="records">Number of records to retrived</label>
+           <input type="" class="form-control-lg" id="input">
+           <br>
 
-           <label>Start year (Option)</label>
-           <input type="">
+           <label class="start">Start year (Option)</label>
+           <input type="" class="form-control-lg" id="input" >
+           <br>
 
-           <label> End year (Option)</label>
-           <input type="">
+           <label class="end"> End year (Option)</label>
+           <input type="" class="form-control-lg" id="input">
+
        </form>
 
        <button type="submit">Submit</button>
@@ -43,44 +47,6 @@
 
         </div>
    </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
-
-// on click event to push the search term
-$("search term button").on("click", function() {
-    var searchTerm = $(this).attr("data-TITLE"); // GET CORRECT DATA ATTR FROM BISMARK
-    var limit = $(this).attr("data-LIMIT"); // GET CORRECT DATA ATTR
-    var startDate = $(this).attr("data-STARTDATE"); // FROM HTML
-    var endDate = $(this).attr("data-ENDDATE"); // FROM HTML
-    var queryURL = "........" + searchTerm + "....." + "&limit=" + limit;// api url from Jerry
-
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-      })
-
-    .then(function(response) {
-
-    });
-
-    // on click event for limiting number of records to retrieve
-    $("").on("click", function() {
-
-    });
-
-    // on click start yr
-    $("").on("click", function() {
-
-    });
-
-    // on click end yr
-    $("").on("click", function() {
-
-    });
-
-});
-
-</script>
-
+  
 </body>
 </html>
